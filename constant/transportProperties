@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+transportModel  Newtonian;
+
+// --- air
+
+nu              [0 2 -1 0 0 0 0] 1.568e-05;	// kinematic viscosity
+mu              [1 -1 -1 0 0 0 0] 1.846e-5;	// viscosity
+rho             [1 -3 0 0 0 0 0 ] 1.225;	// density
+
+// --- water
+
+nuw             [0 2 -1 0 0 0 0] 8.9178e-07;	// kinematic viscosity
+muW             [1 -1 -1 0 0 0 0] 8.891e-04;	// viscosity
+rhoW            [1 -3 0 0 0 0 0 ] 997;		// density
+
+// -- mixture
+
+alphaW           [0 0 0 0 0 0 0] 0.01;		// water/air mass ratio
+dW               [0 1 0 0 0 0 0] 150e-06;	// droplet diameter
+
+// -- pimpleDiffFoam version 1 only
+
+dw               [0 1 0 0 0 0 0] 150e-06;	// droplet diameter
+
+// ************************************************************************* //

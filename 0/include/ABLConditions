@@ -1,0 +1,20 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+
+flowDir		(1 0 0);			// direction vector of wind velocity
+zDir		(0 0 1);			// vertical direction vector
+Uref		1;				// reference wind speed
+Zref		1;				// height of reference wind speed
+z0		uniform 0.01; //[m]		// roughness length
+zGround		uniform 0; 			// ground height
+
+// ************************************************************************* //
+
+
+
+
